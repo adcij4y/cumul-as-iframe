@@ -1,0 +1,21 @@
+{
+    "name": "Stumul.io",
+    "version": "1.0",
+    "description": "Studio and Cumul.io Script Injection Helper for Demo of Cumul.io Integration",
+    "permissions": ["activeTab", "declarativeContent", "storage"],
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    },
+    "content_scripts": [
+        {
+          "matches": ["https://app.cumul.io/*"],
+          "js": ["content.js"],
+          "all_frames": true
+        }
+      ],
+    "manifest_version": 2,
+    "web_accessible_resources": [
+        "integration-scripts/*"
+    ]
+  }
